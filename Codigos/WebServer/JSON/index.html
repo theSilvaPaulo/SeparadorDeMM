@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Separador M&M</title>
+
+		<!--Corrige acentos-->
+  		<meta charset="utf-8" />
+  		<!--Icone Aba-->
+  		<link rel="icon" href="assets/css/images/m&mVermelho.png">
+  		<!--Bootstrap-->
+  		<link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" />
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  		<!--CSS-->
+  		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  		<!--JS-->
+  		<script src="script.js"></script>
+  		<!--Mobile-->
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<style type="text/css">
+			/*Insercao da fonte do M&M*/
+			@font-face {
+			    font-family: 'FonteMM'; /*Nome da fonte da logo do M&M*/
+			    src: url("assets/css/AachenMediumPlain.ttf") format("truetype"); /*Endereco local da fonte*/
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!--Cabeçalho-->
+		<div class="nav navbar-default navbar-fixed-top" id="cabecalho">
+		    <div class="container">
+		      	<ul class="pull-left" id="logo">
+		        	<!-- Logo -->
+		        	<a href="index.html">
+		        		<img src="assets/css/images/m&mVermelho.png" id="logo">
+		        	</a>
+		      	</ul>
+
+		      	<!--Menu de Pilulas-->
+		      	<ul class="pull-right nav nav-pills hidden-xs">
+			        <li class="active"><a href="index.html">Inicio</a></li>
+			        <li><a href="separacao.html">Separação</a></li>
+			        <!--<li><a href="grafico.html">Gráfico</a></li>-->
+			    </ul>
+
+			    <!--Menu Dropdown-->
+			    <div class="pull-right dropdown hidden-sm hidden-md hidden-lg hidden-xl">
+					<button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Navegar <span class="caret"></span></button>
+
+					<ul class="dropdown-menu">
+					    <li><a href="index.html">Inicio</a></li>
+					    <li><a href="separacao.html">Separação</a></li>
+						<!--<li><a href="grafico.html">Gráfico</a></li>-->
+					</ul>
+				</div>
+		    </div>
+		</div>
+
+		<!--Jumbotron (background-image no CSS)-->
+		<div class="jumbotron">
+		    <div class="container">
+		    	<!--Titulo jumbotron-->
+			    <h1>m&m Sorting Machine</h1>
+			    <!--Paragrafo jumbotron-->
+			    <p>Bem vindo ao futuro</p>
+		    </div>
+		</div>
+
+		<!--Divisao do botao comecar-->		
+		<div id="divComecar">
+			<div class="container">
+				<!--Texto para botao COMECAR-->
+				<h1>Acompanhe seus m&m's sendo separados:</h1>
+			    <!--Botao para comecar a pegar o JSON-->
+				<a href="separacao.html" class="btn btn-primary" id="btnComecar">Visualize a separação!</a>
+				<hr>
+			</div>
+		</div>
+
+		<!--Quem somos nos-->
+		<div class="saiba-mais">
+			<div class="container">
+				<div class="row">
+ 					<div class="col-md-4">
+ 						<!--Efetivo Quem Somos Nos-->
+  						<h3>Quem somos nós?</h3>
+  						<p>Conhecidos como Eduardo, Carol e Pivetão, somos um trio cansado da bagunça e com sede por organização. Atualmente no 2º ano do COLTEC, estamos cada vez mais mergulhados no mundo do software e do hardware. Essa foi nossa tentativa de juntar os dois.</p>
+					</div>
+					
+					<div class="col-md-4">
+						<!--Nossos objetivos-->
+	  					<h3>Nosso objetivo</h3>
+	  					<p>Nosso objetivo é simplesmente tornar o mundo mais organizado. Tendo como inspiração o usuário IvcVideo, projetista original da máquina, ansiamos por suprir a ansiedade daqueles com TOC e, principalmente, passar de ano.</p>
+					</div>
+
+					<div class="col-md-4">
+						<!--Entre em contato-->
+						<h3>Entre em Contato</h3>
+						<p>Você pode entrar em contato conosco 24h por dia. Envie um e-mail ou dê um telefonema.</p>
+						<p><a href="#">coltec203@gmail.com</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

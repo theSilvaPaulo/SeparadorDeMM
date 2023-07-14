@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Separador M&M</title>
+
+		<!--Corrige acentos-->
+  		<meta charset="utf-8" />
+  		<!--Icone Aba-->
+  		<link rel="icon" href="assets/css/images/m&mVermelho.png">
+  		<!--Bootstrap-->
+  		<link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" />
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  		<!--CSS-->
+  		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  		<!--JS-->
+  		<script src="script.js"></script>
+  		<!--Mobile-->
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<!--Ploty.js-->
+  		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	
+		<style type="text/css">
+			/*Insercao da fonte do M&M*/
+			@font-face {
+			    font-family: 'FonteMM'; /*Nome da fonte da logo do M&M*/
+			    src: url("assets/css/AachenMediumPlain.ttf") format("truetype"); /*Endereco local da fonte*/
+			}
+		</style>
+
+		<script>
+			//Quando carregar a página, plotar os graficos
+			window.onload = function(){
+				plotarGrafico();
+				comecaComunicacao();
+				//intervalo = setInterval(plotarGrafico, 5000);
+			}
+
+			//Toda vez que "resizar" o navegador, plotar de novo, para ajustar o tamanho destes
+			window.onresize = function(){
+				plotarGrafico();
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<!--Cabeçalho-->
+		<div class="nav navbar-default navbar-fixed-top" id="cabecalho">
+		    <div class="container">
+		      	<ul class="pull-left" id="logo">
+		        	<!-- Logo -->
+		        	<a href="index.html">
+		        		<img src="assets/css/images/m&mVermelho.png" id="logo">
+		        	</a>
+		      	</ul>
+
+		      	<!--Menu de Pilulas-->
+		      	<ul class="pull-right nav nav-pills hidden-xs">
+			        <li><a href="index.html">Inicio</a></li>
+			        <li><a href="separacao.html">Separação</a></li>
+			        <li class="active"><a href="grafico.html">Gráfico</a></li>
+			    </ul>
+
+			    <!--Menu Dropdown-->
+			    <div class="pull-right dropdown hidden-sm hidden-md hidden-lg hidden-xl">
+					<button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Navegar <span class="caret"></span></button>
+
+					<ul class="dropdown-menu">
+					    <li><a href="index.html">Inicio</a></li>
+					    <li><a href="separacao.html">Separação</a></li>
+						<li><a href="grafico.html">Gráfico</a></li>
+					</ul>
+				</div>
+		    </div>
+		</div>
+
+		<!--Jumbotron apenas para margens-->
+		<div class="jumbotron" id="jumbotronGrafico">
+		    <div class="container">
+		    </div>
+		</div>
+
+		<!--Divisao com o grafico-->		
+		<div id="divGrafico">
+			<div class="container">
+				<!--Titulo dos graficos-->
+				<h1>Seus m&m's como você nunca viu</h1>
+				<h2>Em um gráfico!</h2>
+				
+				<div class="row">
+					<!--Coluna do grafico de barras-->
+					<div class="col-md-6 colunasGraficos">
+						<!--Efetiva divisao com o grafico de barras-->
+						<div id="graficoBarras"></div>
+					</div>
+
+					<!--Coluna do grafico de pizza-->
+					<div class="col-md-6 colunasGraficos">
+						<!--Efetiva divisao com o grafico de barras-->
+						<div id="graficoPizza"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
